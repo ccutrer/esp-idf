@@ -384,8 +384,7 @@ async def main():
 
             if (args.secver != 0) and not await has_capability(obj_transport, 'no_pop'):
                 if len(args.pop) == 0:
-                    print('---- Proof of Possession argument not provided ----')
-                    exit(2)
+                    args.pop = binput('Proof of Possession required : ')
             elif len(args.pop) != 0:
                 print('---- Proof of Possession will be ignored ----')
                 args.pop = ''
