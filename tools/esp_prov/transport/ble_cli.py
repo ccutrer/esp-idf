@@ -63,7 +63,7 @@ class BLE_Bleak_Client:
                 print('{0: >4} {1: <33} {2: <12}'.format(
                     'S.N.', 'Name', 'Address'))
                 for i in range(len(devices)):
-                    print('[{0: >2}] {1: <33} {2: <12}'.format(i + 1, devices[i].name, devices[i].address))
+                    print('[{0: >2}] {1: <33} {2: <12}'.format(i + 1, devices[i].name or 'Unknown', devices[i].address))
 
                 while True:
                     try:
